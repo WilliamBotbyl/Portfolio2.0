@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
+
+$font: "Fira Code", monospace;
+$fontColor: rgb(96, 123, 150);
+$bkg: rgb(1, 22, 39);
+$border: rgb(30, 45, 61);
+$yellow: rgb(254, 165, 95);
+
+@mixin navTextStyle {
+  color: $fontColor;
+  font-family: $font;
+  font-size: 1rem;
+  text-decoration: none;
+  // padding: 0 1rem;
+}
+
+.navbar {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  min-height: 7vh;
+  background-color: $bkg;
+  border-bottom: 1px solid $border;
+  padding: 0px 0px 0px 0px !important;
+
+  .brand {
+    @include navTextStyle;
+    padding-left: 2vw;
+    width: 7vw;
+    color: $fontColor;
+    &:hover {
+      color: $yellow;
+    }
+  }
+  .container {
+    padding: 0px 0px 0px 0px !important;
+  }
+  .nav {
+    display: flex;
+    min-height: 7vh;
+    min-width: 100%;
+    align-items: center;
+    padding: 0px 0px 0px 0px !important;
+    .linkWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 8vw;
+      min-height: 7vh;
+      border-right: 1px solid $border;
+      border-left: 1px solid $border;
+      padding: 0px 0px 0px 0px !important;
+      .link {
+        min-width: 8vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // jus-items: center;
+        --b: 0.2em; /* the thickness of the line */
+        --c: rgb(254, 165, 95); /* the color */
+
+        color: $fontColor;
+        // padding-block: var(--b);
+        background: linear-gradient(var(--c) 50%, #000 0) 0%
+            calc(100% - var(--_p, 0%)) / 100% 200%,
+          linear-gradient(var(--c) 0 0) 0% var(--_p, 0%) / var(--_p, 0%)
+            var(--b) no-repeat;
+        -webkit-background-clip: text, padding-box;
+        background-clip: text, padding-box;
+        transition: 0.3s var(--_s, 0s) linear,
+          background-size 0.3s calc(0.3s - var(--_s, 0s));
+      }
+      .link:hover {
+        --_p: 100%;
+        --_s: 0.2s;
+        color: rgb(255, 255, 255);
+      }
+
+      .link {
+        font-family: $font;
+        font-size: 1rem;
+        margin: 0 auto;
+        cursor: pointer;
+        padding: 0px 0px 0px 0px;
+      }
+
+      // end linkWrapper
+    }
+
+    // end nav
+  }
+
+  // end navbar
+}
+
+.linkContact {
+  position: absolute;
+  right: 5%;
+  display: flex;
+  align-items: center;
+  min-width: 8vw;
+  min-height: 7vh;
+  // border-right: 1px solid $border;
+  border-left: 1px solid $border;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  // margin-left: 50%;
+  .link {
+    --b: 0.2em; /* the thickness of the line */
+    --c: rgb(254, 165, 95); /* the color */
+
+    color: $fontColor;
+    // padding-block: var(--b);
+    background: linear-gradient(var(--c) 50%, #000 0) 0%
+        calc(100% - var(--_p, 0%)) / 100% 200%,
+      linear-gradient(var(--c) 0 0) 0% var(--_p, 0%) / var(--_p, 0%) var(--b)
+        no-repeat;
+    -webkit-background-clip: text, padding-box;
+    background-clip: text, padding-box;
+    transition: 0.3s var(--_s, 0s) linear,
+      background-size 0.3s calc(0.3s - var(--_s, 0s));
+  }
+  .link:hover {
+    --_p: 100%;
+    --_s: 0.2s;
+    color: white;
+  }
+  .link {
+    font-family: $font;
+    font-size: 1rem;
+    margin: 0 0 0 0 !important;
+    cursor: pointer;
+    padding: 0 0 0 0;
+  }
+}
+
+.hamburgerWrapper {
+  background-color: $bkg;
+  min-height: 7vh;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+@media (min-width: 300px) {
+}
+
+/* You might do landscape phones here if your content seems to need it */
+@media (min-width: 450px) {
+}
+
+/* Starting into tablets somewhere in here */
+@media (min-width: 600px) {
+}
+
+/* Perhaps bigger tablets */
+@media (min-width: 750px) {
+  .brand {
+    min-width: 20vw;
+  }
+}
+
+/* Desktop screen or landscape tablet */
+@media (min-width: 900px) {
+  .brand {
+    min-width: 20vw;
+  }
+}
+
+/* A bit bigger if you need some adjustments around here */
+@media (min-width: 1100px) {
+  .brand {
+    color: white;
+    min-width: 0vw;
+  }
+  .linkWrapper {
+    // border: none;
+  }
+  .link {
+    // border: none;
+  }
+}

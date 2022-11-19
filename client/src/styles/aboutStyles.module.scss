@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
+
+$mainbkg: rgb(1, 22, 39);
+$font: "Fira Code", monospace;
+$fontColor: rgb(96, 123, 150);
+$bkg: rgb(1, 22, 39);
+$border: rgb(30, 45, 61);
+
+@mixin textNormal {
+  font-family: $font;
+  font-size: 1rem;
+  color: $fontColor;
+}
+@mixin border {
+  border: 1px solid $border;
+}
+
+.mainContainer {
+  min-height: calc(100vh - 12vh);
+  background-color: $mainbkg;
+}
+.clicked {
+  // rotate 90 degrees
+  transform: rotate(90deg);
+}
+
+@media screen and (max-width: 480px) {
+}
+
+// /* Then progressively add bigger sizes from small to large */
+
+/* Smartphones start somewhere around here */
+@media (min-width: 300px) {
+}
+
+/* You might do landscape phones here if your content seems to need it */
+@media (min-width: 450px) {
+}
+
+/* Starting into tablets somewhere in here */
+@media (min-width: 600px) {
+}
+
+/* Perhaps bigger tablets */
+@media (min-width: 750px) {
+}
+
+/* Desktop screen or landscape tablet */
+@media (min-width: 900px) {
+}
+
+/* A bit bigger if you need some adjustments around here */
+@media (min-width: 1100px) {
+  .row {
+    .col1 {
+      min-height: calc(100vh - 12vh);
+      border-right: 1px solid $border;
+      padding: 0px 0px 0px 0px !important;
+    }
+    .col2 {
+      min-height: calc(100vh - 12vh);
+    }
+    .col3 {
+      min-height: calc(100vh - 12vh);
+    }
+  }
+  .mainLeft {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .leftIcons {
+      padding-top: 5vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 30%;
+      min-height: calc(100vh - 12vh);
+    }
+  }
+  .rightTabs {
+    min-width: 69.9%;
+    border-left: 1px solid $border;
+  }
+  .dropDown1 {
+    padding-top: 1vh;
+    display: flex;
+    flex-direction: row;
+    min-width: 100%;
+    align-items: center;
+    justify-content: start;
+    padding-left: 1.2em;
+    cursor: pointer;
+    border-bottom: 1px solid $border;
+    p {
+      color: $fontColor;
+      font-family: $font;
+      padding-bottom: 2.2px;
+    }
+  }
+}
+// wide screens
+@media (min-width: 1500px) {
+}
+
+.codeIcon {
+  color: $fontColor;
+}
+.codeIcon:hover {
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+
+  transform: scale(1.1);
+  // make the icon get bigger and smaller
+  animation: pulse 1s infinite;
+
+  @keyframes pulse {
+    0% {
+      transform: scale(0.98);
+    }
+    70% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+.gameIcon {
+  color: $fontColor;
+  margin-top: 4vh;
+}
+.gameIcon:hover {
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  // make the icon slightly bigger
+  transform: scale(1.1);
+  // make the icon get bigger and smaller
+  animation: pulse 1s infinite;
+
+  @keyframes pulse {
+    0% {
+      transform: scale(0.98);
+    }
+    70% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+
+.blogIcon {
+  color: $fontColor;
+  margin-top: 4vh;
+}
+.blogIcon:hover {
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+
+  transform: scale(1.1);
+  // make the icon get bigger and smaller
+  animation: pulse 1s infinite;
+
+  @keyframes pulse {
+    0% {
+      transform: scale(0.98);
+    }
+    70% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}

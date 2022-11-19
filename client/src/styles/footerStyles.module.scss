@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
+
+$font: "Fira Code", monospace;
+$fontColor: rgb(96, 123, 150);
+$bkg: rgb(1, 22, 39);
+$border: rgb(30, 45, 61);
+$yellow: rgb(254, 165, 95);
+
+@mixin fontStyle {
+  font-family: $font;
+  font-size: 1rem;
+  color: $fontColor;
+}
+.footerContainer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  min-height: 7vh;
+  margin-bottom: 0px;
+  background-color: $bkg;
+  border-top: 1px solid $border;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+// <--------- For some reason, the below css i not working. ---------->
+// .footerContainer {
+//   min-height: 5vh;
+//   min-width: 100%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+.innerContainer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 100vw;
+  min-height: 7vh;
+  margin-bottom: 0px;
+  display: flex;
+  min-height: 5vh;
+  align-items: center;
+  border-top: 1px solid $border;
+  background-color: $bkg;
+  color: aliceblue;
+  padding: 0px 0px 0px 0px;
+
+  p {
+    @include fontStyle;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+  }
+  .linkWrapper {
+    display: flex;
+    align-items: center;
+  }
+  .findmeWrapper {
+    min-height: 5vh;
+    display: flex;
+    align-items: center;
+    min-width: 8vw;
+    padding-left: 1rem;
+    border-right: 1px solid $border;
+  }
+}
+
+.linkedInWrapper {
+  min-height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 4vw;
+  padding-left: 1rem;
+  border-right: 1px solid $border;
+}
+.twitterWrapper {
+  min-height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 4vw;
+  padding-left: 1rem;
+  border-right: 1px solid $border;
+}
+.userNameWrapper {
+  position: absolute;
+  right: 8%;
+  min-height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 4vw;
+  padding-left: 1rem;
+  border-left: 1px solid $border;
+}
