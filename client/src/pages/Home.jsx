@@ -8,7 +8,7 @@ function Home() {
     <Container fluid className={homeStyles.homeContainer}>
       <Row className={homeStyles.row1}>
         {/*breakpoints need to go in the row, nopt column*/}
-        <Col id={homeStyles.col1} lg={4} md={6}>
+        <Col id={homeStyles.col1} lg={6} md={6} xxl={4} xl={5}>
           <div className={homeStyles.mainLeft}>
             <p>Hi all. I am</p>
             <h1>William Botbyl</h1>
@@ -17,14 +17,14 @@ function Home() {
             <br />
           </div>
         </Col>
-        <Col className={homeStyles.imgColumn} lg={6} md={6}>
+        <Col className={homeStyles.imgColumn} lg={4} md={6} xxl={5} xl={7}>
           <div>
             <img className={homeStyles.img} src={homeImg} alt="hom-right" />
           </div>
         </Col>
       </Row>
       <Row className={homeStyles.row2}>
-        <Col id={homeStyles.col2} lg={4} md={6}>
+        <Col id={homeStyles.col2} lg={6} md={6} xxl={4} xl={5}>
           <div className={homeStyles.mainBottom}>
             <div className={homeStyles.comments}>
               {"//"}&nbsp;B.S. in Software Engineering
