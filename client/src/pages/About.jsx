@@ -37,7 +37,7 @@ function About() {
   return (
     <div className={aboutStyles.mainContainer}>
       <Row className={aboutStyles.row}>
-        <Col lg={2} md={3} className={aboutStyles.col1}>
+        <Col lg={3} xl={2} md={3} className={aboutStyles.col1}>
           <div className={aboutStyles.mainLeft}>
             <div className={aboutStyles.leftIcons}>
               <IconContext.Provider value={{ size: "1.7rem" }}>
